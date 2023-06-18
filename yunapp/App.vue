@@ -13,5 +13,11 @@
 </script>
 
 <style>
+
 	/*每个页面公共css */
-</style>
+	
+	/* 引入图标样式 */
+    @import 'common/icon.css'
+</style>	
+ 
+
