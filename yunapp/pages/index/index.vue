@@ -9,6 +9,10 @@
 
 <script setup>
  const title='标题'
+ const handle=()=>
+ {
+	 console.log("sadas");
+ }
 </script>
 
 <style>
