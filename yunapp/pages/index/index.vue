@@ -6,6 +6,7 @@
 		</view>
 		<text class="iconfont icon-QQ"></text>
 		<text class="iconfont icon-bianji1"></text>
+		<view class="animate__animated" hover-class="animate__pulse" style="border: 1rpx solid #ccc;">点击效果1</view>
 	</view>
 </template>
 

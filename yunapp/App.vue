@@ -17,7 +17,10 @@
 	/*每个页面公共css */
 	
 	/* 引入图标样式 */
-    @import 'common/icon.css'
+	
+    @import 'common/icon.css';
+	@import 'animate.css';
+
 </style>	
  
 
