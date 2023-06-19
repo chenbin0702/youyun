@@ -1,27 +1,42 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
-		<text class="iconfont icon-QQ"></text>
-		<text class="iconfont icon-bianji1"></text>
-		<view class="animate__animated" hover-class="animate__pulse" style="border: 1rpx solid #ccc;">点击效果1</view>
+	<view class="box">
+		<commonList :list="list"></commonList>
 	</view>
 </template>
 
 <script setup>
- const title='标题'
- const handle=()=>
- {
-	 console.log("sadas");
- }
+	import  commonList  from "../../components/common/common-list.vue"
+	const list = [{
+			avatar: '../../static/logo.png',
+			nikeName: 'wqeqwe',
+			time: '2019-10-12',
+			title: '我是标题',
+			titlePic: '../../static/tabBar/msg.png',
+			support: {
+				support_num: 1,
+				unsupport_num: 2
+			},
+			comment_num: 2,
+			share_num: 3
+		},
+		{
+			avatar: '../../static/logo.png',
+			nikeName: '陈斌吃不吃',
+			time: '2019-10-12',
+			title: '我是标题',
+			titlePic: '../../static/tabBar/msg.png',
+			support: {
+				support_num: 1,
+				unsupport_num: 2
+			},
+			comment_num: 2,
+			share_num: 3
+		}
+	]
 </script>
 
-<style>
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+<style lang="scss">
+	.box {
+		
 	}
 </style>
