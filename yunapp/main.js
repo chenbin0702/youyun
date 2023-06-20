@@ -2,6 +2,7 @@ import App from './App'
 
 // #ifndef VUE3
 import Vue from 'vue'
+
 Vue.config.productionTip = false
 App.mpType = 'app'
 
@@ -33,10 +34,14 @@ try {
   });
 } catch (error) { }
 
+
 const app = new Vue({
   ...App
 })
+
+
 app.$mount()
+
 // #endif
 
 // #ifdef VUE3
