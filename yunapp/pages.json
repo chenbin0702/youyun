@@ -56,6 +56,35 @@
             }
             
         }
+        ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "app-plus": {
+                	"titleNView": {
+                		// 搜索栏配置	
+                		"searchInput": {
+                			"align": "center",
+                			"backgroundColor": "#f5f4f2",
+                			"borderRadius": "10px",
+                		
+                			"placeholder": "搜索帖子",
+                			"placeholderColor": "6d6c67"
+                		},
+                		"buttons": [
+                			{
+                				"color": "#333333",
+                				"colorPressed": "#FD597C",
+                				"float": "right",
+                				"fontSize": "14px",
+                				"text": "搜索"
+                			}
+                		]
+                	}
+                }
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

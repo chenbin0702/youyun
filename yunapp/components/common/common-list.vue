@@ -78,7 +78,8 @@
 		list:{
 			type:Array,
 			default:()=>[]
-		}
+		},
+	
 	})
 	const emit=defineEmits(['follow','doSupport'])
 	// 个人空间
