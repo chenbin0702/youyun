@@ -1,2 +1,7 @@
-node_modules/
 unpackage/
+node_modules/
+.history/
+.idea/
+.hbuilderx/
+.project
+.DS_Store

@@ -12,12 +12,8 @@
 	}
 </script>
 
-<style>
-
-	/*每个页面公共css */
-	
-	/* 引入图标样式 */
-	
+<style lang="scss">
+	@import "uview-plus/index.scss";
     @import 'common/icon.css';
 	@import 'animate.css';
 

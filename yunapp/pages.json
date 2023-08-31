@@ -1,4 +1,12 @@
 {
+	"easycom": {
+		// 注意一定要放在custom里，否则无效，https://ask.dcloud.net.cn/question/131175
+		"custom": {
+			"^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
+		}
+	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
@@ -14,71 +22,151 @@
 							"placeholder": "搜索帖子",
 							"placeholderColor": "6d6c67"
 						},
-						"buttons": [
+						"buttons": [{
+							"color": "#333333",
+							"colorPressed": "#FD597C",
+							"float": "right",
+							"fontSize": "20px",
+							"fontSrc": "/static/iconfont.ttf",
+							"text": "\ue668"
+						}]
+					}
+				}
+
+			}
+		}, {
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "我的"
+
+			}
+
+		}, {
+			"path": "pages/msg/msg",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+								"color": "#333333",
+								"colorPressed": "#FD597C",
+								"float": "left",
+								"fontSize": "20px",
+								"fontSrc": "/static/iconfont.ttf",
+								"text": "\ue611"
+							},
 							{
 								"color": "#333333",
 								"colorPressed": "#FD597C",
 								"float": "right",
 								"fontSize": "20px",
 								"fontSrc": "/static/iconfont.ttf",
-								"text": "\ue668"
+								"text": "\ue649"
 							}
 						]
 					}
 				}
-					
 			}
+
+		}, {
+			"path": "pages/news/news",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/search/search",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						// 搜索栏配置	
+						"searchInput": {
+							"align": "center",
+							"backgroundColor": "#f5f4f2",
+							"borderRadius": "10px",
+                           
+							"placeholder": "搜索帖子",
+							"placeholderColor": "6d6c67"
+						},
+						"buttons": [{
+							"color": "#333333",
+							"colorPressed": "#FD597C",
+							"float": "right",
+							"fontSize": "15px",
+							"text": "搜索"
+						}]
+					}
+				}
+			}
+
+		}, {
+			"path": "pages/add-input/add-input",
+			"style": {
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+
+		}, {
+			"path": "pages/topic-nav/topic-nav",
+			"style": {
+				"navigationBarTitleText": "话题分类",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/topic-detail/topic-detail",
+			"style": {
+				"navigationBarTitleText": "话题详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/user-list/user-list",
+			"style": {
+				"navigationBarTitleText": "好友列表",
+				"app-plus": {
+					"animationType": "slide-in-left",
+					"titleNView": {
+						// 搜索栏配置	
+						"searchInput": {
+							"align": "center",
+							"backgroundColor": "#f5f4f2",
+							"borderRadius": "10px",
+							  "disabled": true,
+							"placeholder": "搜索好友",
+							"placeholderColor": "6d6c67"
+						},
+						"buttons": [{
+							"color": "#333333",
+							"colorPressed": "#FD597C",
+							"float": "right",
+							"fontSize": "15px",
+							"text": "取消"
+						}]
+					}
+				}
+			}
+
 		}
 	    ,{
-            "path" : "pages/user/user",
+            "path" : "pages/user-chat/user-chat",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "我的",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/msg/msg",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "消息",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/news/news",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "动态",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/search/search",
-            "style" :                                                                                    
-            {
+                "navigationBarTitleText": "聊天界面",
                 "app-plus": {
                 	"titleNView": {
-                		// 搜索栏配置	
-                		"searchInput": {
-                			"align": "center",
-                			"backgroundColor": "#f5f4f2",
-                			"borderRadius": "10px",
-                		
-                			"placeholder": "搜索帖子",
-                			"placeholderColor": "6d6c67"
-                		},
                 		"buttons": [
-                			{
-                				"color": "#333333",
-                				"colorPressed": "#FD597C",
-                				"float": "right",
-                				"fontSize": "14px",
-                				"text": "搜索"
-                			}
+                				{
+								"color": "#333333",
+								"colorPressed": "#FD597C",
+								"float": "right",
+								"fontSize": "20px",
+								"fontSrc": "/static/iconfont.ttf",
+								"text": "\ue628"
+							}
                 		]
                 	}
                 }
@@ -97,8 +185,7 @@
 		"selectedColor": "#FC5C82",
 		"backgroundColor": "#ffffff",
 		"borderStyle": "white",
-		"list": [
-			{
+		"list": [{
 				"pagePath": "pages/index/index",
 				"text": "首页",
 				"iconPath": "static/tabBar/home.png",
